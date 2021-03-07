@@ -1,0 +1,167 @@
+
+.background{
+    background-color: #87CEEB;
+}
+
+body {
+    width: 1400px;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+}
+
+.main-heading {
+    text-align: center;
+}
+
+.main-heading h1{
+    display: inline;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.main-heading img{
+    border-radius: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+}
+
+nav button {
+    height: 50px;
+    width: 60px;
+    font-size: medium;
+}
+
+h2{
+    font-size: 30px;
+}
+
+.section-with-image{
+    margin-top: 10px;
+    border-top: 2px solid gray;
+    padding-bottom: 20px;
+    border-bottom: 2px solid gray;
+}
+
+.section-with-text{
+    padding-bottom: 20px;
+    border-bottom: 2px solid gray;
+}
+
+.section-with-background{
+    padding-bottom: 20px;
+    border-bottom: 2px solid gray;
+}
+
+.image-background{
+    margin: 20px 0 10px 0;
+    padding: 5px 0 10px 20px;
+    background-image: url('./assets/images/background-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.image-background h2{
+    margin: 10px 0 0 0;
+}
+
+.tabbed{
+    padding-left: 50px;
+}
+
+.list{
+    margin: 0 0 0 0;
+}
+
+.sublist{
+    margin: 0;
+    padding: 0 0 0 20px;
+    font-style: italic;
+}
+
+.update-info{
+    border: 2px dashed black;
+    padding: 50px;
+    padding-bottom: 30px;
+    font-size: larger;
+}
+
+.quote-phrase{
+    font-style: italic;
+}
+
+.quote-name{
+    font-weight: bold;
+}
+
+.line-content{
+    display: flex;
+    margin: 0 0 0 0;
+    justify-content: space-evenly;
+}
+
+.line-element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: small;
+}
+
+.line-element p{
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.line-element input{
+    height: 15px;
+}
+
+.contact-area h2{
+    margin: 20px 0 20px 0;
+}
+
+.contact-area button{
+    margin-top: 10px;
+    font-size: large;
+}
+
+footer{
+    margin-top: 40px;
+}
+
+footer h3{
+    text-align: center;
+}
+
+footer a{
+    font-size: medium;
+    margin: 0 10px 0 10px;
+}
+
+.socials{
+    width: 400px;
+}
+
+#promo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#promo p{
+    height: 100%;
+    width: 15%;
+    font-weight: normal;
+    font-size: large;
+}
+
+#promo img{
+    width: 400px;
+}
