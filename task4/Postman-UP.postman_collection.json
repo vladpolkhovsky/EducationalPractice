@@ -10,12 +10,12 @@
 			"name": "newton",
 			"item": [
 				{
-					"name": "newton-derive",
+					"name": "newton-1",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "https://newton.now.sh/api/v2/derive/x^2+2x",
+							"raw": "https://newton.now.sh/api/v2/factor/x^2-1",
 							"protocol": "https",
 							"host": [
 								"newton",
@@ -25,109 +25,22 @@
 							"path": [
 								"api",
 								"v2",
-								"derive",
-								"x^2+2x"
+								"factor",
+								"x^2-1"
 							]
-						}
+						},
+						"description": "Обработка математических выражений."
 					},
-					"response": [
-						{
-							"name": "newton",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"url": {
-									"raw": "https://newton.now.sh/api/v2/factor/x^2-1",
-									"protocol": "https",
-									"host": [
-										"newton",
-										"now",
-										"sh"
-									],
-									"path": [
-										"api",
-										"v2",
-										"factor",
-										"x^2-1"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "x-nextjs-page",
-									"value": "/api/v2/[operation]/[data]"
-								},
-								{
-									"key": "access-control-allow-headers",
-									"value": "Origin, X-Requested-With, Content-Type, Accept"
-								},
-								{
-									"key": "date",
-									"value": "Sat, 06 Mar 2021 19:06:24 GMT"
-								},
-								{
-									"key": "access-control-allow-origin",
-									"value": "*"
-								},
-								{
-									"key": "content-length",
-									"value": "70"
-								},
-								{
-									"key": "etag",
-									"value": "\"46-SXfWWyx0hcQPpdQn1J0ErnnIwDQ\""
-								},
-								{
-									"key": "x-vercel-cache",
-									"value": "MISS"
-								},
-								{
-									"key": "server",
-									"value": "Vercel"
-								},
-								{
-									"key": "x-vercel-id",
-									"value": "cdg1::sfo1::wvctm-1615057584306-032d948fc83c"
-								},
-								{
-									"key": "strict-transport-security",
-									"value": "max-age=63072000; includeSubDomains; preload"
-								},
-								{
-									"key": "cache-control",
-									"value": "s-maxage=0"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"operation\": \"factor\",\n    \"expression\": \"x^2-1\",\n    \"result\": \"(x - 1) (x + 1)\"\n}"
-						}
-					]
+					"response": []
 				},
 				{
-					"name": "newton-integrate",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
+					"name": "newton-2",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "graphql",
-							"graphql": {
-								"query": "{\r\n    reques {\r\n        operation\r\n        expression\r\n        result\r\n    }\r\n}",
-								"variables": "{}"
-							}
+							"mode": "formdata",
+							"formdata": []
 						},
 						"url": {
 							"raw": "https://newton.now.sh/api/v2/integrate/x^2+2x",
@@ -146,251 +59,10 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "newton-log",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "graphql",
-							"graphql": {
-								"query": "{\r\n    reques {\r\n        operation\r\n        expression\r\n        result\r\n    }\r\n}",
-								"variables": "{}"
-							}
-						},
-						"url": {
-							"raw": "https://newton.now.sh/api/v2/log/2|8",
-							"protocol": "https",
-							"host": [
-								"newton",
-								"now",
-								"sh"
-							],
-							"path": [
-								"api",
-								"v2",
-								"log",
-								"2|8"
-							]
-						}
-					},
-					"response": []
 				}
 			],
-			"description": "Вычисление мат. выражений.",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				}
-			]
-		},
-		{
-			"name": "http.cat",
-			"item": [
-				{
-					"name": "http.cat.ok[200]",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://http.cat/200",
-							"protocol": "https",
-							"host": [
-								"http",
-								"cat"
-							],
-							"path": [
-								"200"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http.cat.NotFound[404]",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://http.cat/404",
-							"protocol": "https",
-							"host": [
-								"http",
-								"cat"
-							],
-							"path": [
-								"404"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http.cat/UnsupportedMediaFile[415]",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://http.cat/415",
-							"protocol": "https",
-							"host": [
-								"http",
-								"cat"
-							],
-							"path": [
-								"415"
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"description": "Статусы ожидания из котов."
-		},
-		{
-			"name": "goqr",
-			"item": [
-				{
-					"name": "QRCreate",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://api.qrserver.com/v1/create-qr-code/?data=https://http.cat/200&size=200x200&color=333333&bgcolor=a9a9a9",
-							"protocol": "http",
-							"host": [
-								"api",
-								"qrserver",
-								"com"
-							],
-							"path": [
-								"v1",
-								"create-qr-code",
-								""
-							],
-							"query": [
-								{
-									"key": "data",
-									"value": "https://http.cat/200",
-									"description": "Зашифрованное сообщение."
-								},
-								{
-									"key": "size",
-									"value": "200x200",
-									"description": "Размер qr кода в пикселях."
-								},
-								{
-									"key": "color",
-									"value": "333333",
-									"description": "Цвет QR кода"
-								},
-								{
-									"key": "bgcolor",
-									"value": "a9a9a9",
-									"description": "Цвет фона"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "QRRead",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://api.qrserver.com/v1/read-qr-code/?fileurl=http://api.qrserver.com/v1/create-qr-code/?data=https://http.cat/200%26size=200x200%26color=333333%26bgcolor=a9a9a9",
-							"protocol": "http",
-							"host": [
-								"api",
-								"qrserver",
-								"com"
-							],
-							"path": [
-								"v1",
-								"read-qr-code",
-								""
-							],
-							"query": [
-								{
-									"key": "fileurl",
-									"value": "http://api.qrserver.com/v1/create-qr-code/?data=https://http.cat/200&size=200x200&color=333333&bgcolor=a9a9a9"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "QRRead beautiful qr",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://api.qrserver.com/v1/read-qr-code/?fileurl=https://github.com/vladpolkhovsky/EducationalPractice/blob/master/task4/cool-qr.jpg?raw=true",
-							"protocol": "http",
-							"host": [
-								"api",
-								"qrserver",
-								"com"
-							],
-							"path": [
-								"v1",
-								"read-qr-code",
-								""
-							],
-							"query": [
-								{
-									"key": "fileurl",
-									"value": "https://github.com/vladpolkhovsky/EducationalPractice/blob/master/task4/cool-qr.jpg?raw=true"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"description": "Создание и чтение QR кодов.",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				}
-			]
+			"protocolProfileBehavior": {}
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
