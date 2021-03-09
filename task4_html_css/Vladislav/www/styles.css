@@ -1,12 +1,31 @@
-
 .background{
     background-color: #87CEEB;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a:hover{
+    color: purple;
+    margin: 10px;
+    font-size: 30px;
+}
+
+nav button:active{
+    background-color: purple;
 }
 
 body {
     width: 1400px;
     margin: 0 auto;
     font-family: "Roboto", sans-serif;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .main-heading {
@@ -40,10 +59,42 @@ h2{
     font-size: 30px;
 }
 
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.section-with-background h3::first-letter{
+    color: purple;
+}
+
+#contact-form label, input, select{
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+textarea{
+    resize: none;
+    width: 250px;
+    height: 200px;
+}
+
+fieldset{
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+legend{
+    font-size: 20;
+    font-style: italic;
+}
+
 .section-with-image{
     margin-top: 10px;
     border-top: 2px solid gray;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     border-bottom: 2px solid gray;
 }
 
@@ -53,22 +104,26 @@ h2{
 }
 
 .section-with-background{
-    padding-bottom: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
     border-bottom: 2px solid gray;
+    overflow: hidden;
+}
+
+.section-with-background ol{
+    position: relative;
 }
 
 .image-background{
-    margin: 20px 0 10px 0;
-    padding: 5px 0 10px 20px;
-    background-image: url('./assets/images/background-image.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-    font-size: large;
-}
-
-.image-background h2{
-    margin: 10px 0 0 0;
+    background: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 95%;
+    opacity: 0.5;
+    z-index: -3;
 }
 
 .tabbed{
@@ -90,6 +145,14 @@ h2{
     padding: 50px;
     padding-bottom: 30px;
     font-size: larger;
+}
+
+.update-info ul{
+    width: 300px;
+}
+
+.update-info li:nth-child(1) span{
+    background-color: rgba(128, 0, 128, 0.2);
 }
 
 .quote-phrase{
@@ -160,8 +223,37 @@ footer a{
     width: 15%;
     font-weight: normal;
     font-size: large;
-}
+}   
 
 #promo img{
     width: 400px;
+}
+
+.contact-area{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#contact-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        width: 700px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body{
+        width: 700px;
+        font-size: 15px;
+    }
 }

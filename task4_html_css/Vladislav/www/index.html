@@ -30,7 +30,7 @@
                     <p>We are ready to absorb knowledge and improve it to reality...</p>
                     <img src="./assets/images/people.jpg" alt="people">
                 </div>
-                <a href="#">Continue reading</a>
+                <a class="tabbed" href="#">Continue reading</a>
             </section>
             <section id="Posts" class="section-with-text">
                 <h2 class="tabbed">Latest post</h2>
@@ -40,7 +40,7 @@
                     <p class="update-info-date">March 1, 2021 by <a href="#">Anastasia Kaprizova</a></p>
                     <p>Let's discuss situation with Covid-19 in our University. Our group follow main rules, that recomended by <a href="#">WHO</a>:</p>
                     <ul>
-                        <li>Wearing a mask</li>
+                        <li><span>Wearing a mask</span></li>
                         <li>Social distancing</li>
                         <li>Washing hands</li>
                         <li>Monitoring health daily</li>
@@ -52,8 +52,8 @@
                 </article>
             </section>
             <section id="OurGroup" class="section-with-background">
-                <div class="image-background">
-                    <h2>Our Group:</h2>
+                <div class="">
+                    <h2 class="tabbed">Our Group:</h2>
                     <ol>
                         <li>
                             <h3 class="list"><span class="background">Sviatoslav Tegovich</span></h3>
@@ -79,37 +79,40 @@
                         </li>
                     </ol>
                 </div>
+                <img class="image-background" src="assets/images/background-image.jpg">
             </section>
             <section class="contact-area">
-                <h2 id="Contact">Contact US</h2>
-                <div class="line-content">
+                <h2 class="tabbed">Contanct US</h2>
+                <form id="contact-form">
+                    <label for="email">Your email:</label>
+                    <input type="email" name="user-data" id="email" placeholder="name@bsu.by">
+                    <label for="user-pw">Your password:</label>
+                    <input type="password" name="user-data" id="user-pw" required>
+                    <br>
+                    <fieldset>
+                        <legend><span>Who you want to notify?</span></legend>
+                        <label for="sviatoslav">Sviatoslav</label>
+                        <input type="checkbox" name="member" id="sviatoslav" value="sviatoslav">
+                        <label for="vitold">Vitold</label>
+                        <input type="checkbox" name="member" id="vitold" value="vitold">
+                        <label for="anastasia">Anastasia</label>
+                        <input type="checkbox" name="member" id="anastasia" value="anastasia">
+                    </fieldset>
+                    <br>
+                    <label for="message">Info about you</label>
+                    <textarea name="user-info" id="message" cols="30" rows="10"></textarea>
                     <div class="line-element">
-                        <p><b>Your name:</b></p>
-                        <input>
-                    </div>
-                    <div class="line-element">
-                        <p><b>Your message:</b></p>
-                        <input>
-                        <p>Who you want to notify?</p>
-                    </div>
-                    <div class="line-element">
-                        <p><b>Sviatoslav</b></p>
-                        <input type="checkbox">
-                    </div>
-                    <div class="line-element">
-                        <p><b>Vitold</b></p>
-                        <input type="checkbox">
-                    </div>
-                    <div class="line-element">
-                        <p><b>Anastasia</b></p>
-                        <input type="checkbox">
-                    </div>
+                    <label for="rating">Rate our site</label>
+                    <select name="user-info" id="rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
                 </div>
-                <div class="line-content">
-                    <div class="line-element">
-                    <button>Send your message</button>
-                    </div>
-                </div>
+                    <button type="submit" id="send">Send message</button>
+                </form>
             </section>
         </main>
         <footer id="Subscribe" class="background line-content">
